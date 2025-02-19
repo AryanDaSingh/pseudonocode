@@ -1,0 +1,10 @@
+DECLARE a: INTEGER
+DECLARE Number: INTEGER
+INPUT Number
+a <- 0
+REPEAT
+    Number <- Number - 9
+    a <- a + 1
+    OUTPUT a
+UNTIL Number < 9
+OUTPUT "Total ", a, " ITERATIONS"
