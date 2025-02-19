@@ -1,0 +1,28 @@
+DECLARE Player1: STRING
+DECLARE Player2: STRING
+DECLARE Victory: STRING
+OUTPUT "Player 1 input" INPUT Player1
+OUTPUT "Player 2 input" INPUT Player2
+Victory <- "GET OUT"
+IF Player1 = "Rock" THEN
+    CASE OF Player2
+        "Paper" : Victory <- "Player 2 Wins"
+        "Scissors" : Victory <- "Player 1 Wins"
+        "Rock" : Victory <- "DRAW"
+    ENDCASE
+ENDIF
+IF Player1 = "Paper" THEN
+    CASE OF Player2
+        "Scissors" : Victory <- "Player 2 Wins"
+        "Rock" : Victory <- "Player 1 Wins"
+        "Paper" : Victory <- "DRAW"
+    ENDCASE
+ENDIF
+IF Player1 = "Scissors" THEN
+    CASE OF Player2
+        "Rock" : Victory <- "Player 2 Wins"
+        "Paper" : Victory <- "Player 1 Wins"
+        "Scissors" : Victory <- "DRAW"
+    ENDCASE
+ENDIF
+OUTPUT Victory
